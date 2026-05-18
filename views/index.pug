@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .header
+    h1 Student List
+    a.btn.btn-primary(href='/add') + Add Student
+
+  .table-wrap
+    table
+      thead
+        tr
+          th ID
+          th Name
+          th Course
+          th Marks
+          th Actions
+      tbody
+        each student in students
+          tr
+            td
+              span.id-badge ##{student.id}
+            td= student.name
+            td
+              span.course-badge= student.course
+            td
+              span.marks= student.marks
+            td
+              .actions
+                a.btn.btn-edit(href=`/edit/${student.id}`) Edit
+                form(action=`/delete/${student.id}?_method=DELETE`, method='POST', style='display:inline')
+                  button.btn.btn-danger(type='submit') Delete

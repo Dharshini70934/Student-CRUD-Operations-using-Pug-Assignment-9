@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .header
+    h1 Add Student
+    a.btn.btn-ghost(href='/') ← Back
+
+  .form-card
+    form(action='/add', method='POST')
+      .form-group
+        label Name
+        input(type='text', name='name', placeholder='Enter student name', required)
+
+      .form-group
+        label Course
+        input(type='text', name='course', placeholder='e.g. MCA, BCA', required)
+
+      .form-group
+        label Marks
+        input(type='number', name='marks', placeholder='Enter marks', required)
+
+      .form-actions
+        button.btn.btn-primary(type='submit') Add Student
+        a.btn.btn-ghost(href='/') Cancel
