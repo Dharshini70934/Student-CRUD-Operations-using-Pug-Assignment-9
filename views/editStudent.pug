@@ -1,25 +1,24 @@
 extends layout
 
 block content
-  h1 Edit Student
+  .header
+    h1 Edit Student
+    a.btn.btn-ghost(href='/') ← Back
 
-  form(action=`/edit/${student.id}?_method=PUT`, method='POST')
-    div
-      label Name:
-      input(type='text', name='name', value=student.name)
+  .form-card
+    form(action=`/edit/${student.id}?_method=PUT`, method='POST')
+      .form-group
+        label Name
+        input(type='text', name='name', value=student.name, required)
 
-    br
+      .form-group
+        label Course
+        input(type='text', name='course', value=student.course, required)
 
-    div
-      label Course:
-      input(type='text', name='course', value=student.course)
+      .form-group
+        label Marks
+        input(type='number', name='marks', value=student.marks, required)
 
-    br
-
-    div
-      label Marks:
-      input(type='number', name='marks', value=student.marks)
-
-    br
-
-    button.btn.btn-update(type='submit') Update Student
+      .form-actions
+        button.btn.btn-update(type='submit') Update Student
+        a.btn.btn-ghost(href='/') Cancel
