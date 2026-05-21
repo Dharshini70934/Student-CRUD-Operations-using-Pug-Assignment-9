@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #f5f6fa;
+  --bg: #e8e9f0;
   --white: #ffffff;
-  --border: #e8e8e8;
-  --text: #2d2d2d;
-  --muted: #888;
-  --accent: #6c63ff;
-  --accent-light: #ede9ff;
-  --green: #22c55e;
+  --border: #d0d0d0;
+  --text: #1a1a1a;
+  --muted: #666;
+  --accent: #4b44cc;
+  --accent-light: #ddd9ff;
+  --green: #16a34a;
   --green-light: #dcfce7;
-  --blue: #3b82f6;
+  --blue: #2563eb;
   --blue-light: #dbeafe;
-  --red: #ef4444;
+  --red: #dc2626;
   --red-light: #fee2e2;
-  --orange: #f97316;
+  --orange: #ea6c00;
   --orange-light: #ffedd5;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -87,10 +86,10 @@ thead { background: var(--accent-light); }
 
 th {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #4b44cc;
   padding: 14px 20px;
   text-align: left;
 }
@@ -99,7 +98,8 @@ td {
   padding: 15px 20px;
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
-  color: var(--text);
+  color: #1a1a1a;
+  font-weight: 500;
 }
 
 tr:last-child td { border-bottom: none; }
